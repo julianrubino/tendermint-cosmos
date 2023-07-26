@@ -1,4 +1,4 @@
-## Cluster of Digital Ocean droplets
+## Cluster of Digital Ocean droplets (VMs)
 
 ##### NOTE: We will not be using a remote backend, so I will be pushing the lock file here too. Ignore this file or remove it before applying.
 
