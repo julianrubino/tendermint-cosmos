@@ -17,7 +17,7 @@
 You should get an output like the following one:
 
 ```
-Apply complete! Resources: 4 added, 0 changed, 0 destroyed.
+Apply complete! Resources: 6 added, 0 changed, 0 destroyed.
 
 Outputs:
 
