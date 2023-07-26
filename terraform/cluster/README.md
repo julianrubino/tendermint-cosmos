@@ -13,3 +13,29 @@
 ##### The command to apply using the exported variables is:
 
 ```terraform apply -var DO_API_TOKEN="$DO_API_TOKEN" -var ssh_key="$SSH_KEY_FILE" -var-file=values.tfvars```
+
+You should get an output like the following one:
+
+```
+Apply complete! Resources: 4 added, 0 changed, 0 destroyed.
+
+Outputs:
+
+instances = [
+  [
+    "123456789",
+    "987654321",
+    "012345678",
+    "098765432",
+  ],
+]
+name = "composablenet"
+public_ips = [
+  [
+    "x.x.x.x",
+    "x.x.x.x",
+    "x.x.x.x",
+    "x.x.x.x",
+  ],
+]
+```
