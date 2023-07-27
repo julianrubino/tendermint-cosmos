@@ -1,0 +1,15 @@
+Description=tendermint
+Requires=network-online.target
+After=network-online.target
+
+[Service]
+Restart=on-failure
+User=tendermint
+Group=tendermint
+PermissionsStartOnly=true
+ExecStart=/usr/bin/tendermint node --proxy_app=kvstore --p2p.persistent_peers=fbfbc127f7449fd3486a6b13f927ec72f48b30a8@137.184.77.226:26656,809c03cce14deec4fa968e5f3e29e2520daa68e1@167.71.23.3:26656,195fc194c4b94651fa95d5642449508eda86c65a@143.198.190.73:26656,1c11b508523a3ec2064886a6e4ab44956d3239a2@137.184.193.213:26656
+ExecReload=/bin/kill -HUP \$MAINPID
+KillSignal=SIGTERM
+
+[Install]
+WantedBy=multi-user.target
