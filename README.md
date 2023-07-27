@@ -20,13 +20,13 @@ This will create the node directories with the node files in a folder called myt
 
 ##### Configure the droplets with the node files
 
-1. Install the tendermint binary:
+1. Create the Unit file, tendermint user and group, also give specific permission:
 
 ```
 ansible-playbook -i inventory/digital_ocean.py -l composablenet install.yml
 ```
 
-2. Configure the node files:
+2. Configure the node files and install the binary in the droplets (you should generate the binary downloading the tendermint repo and running make build-linux):
 ```
 ansible-playbook -i inventory/digital_ocean.py -l composablenet config.yml -e BINARY=<PATH_TO_TENDERMINT_BINARY> -e CONFIGDIR=<PATH_TO_NODE_FILES>
 ```
